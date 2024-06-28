@@ -16,6 +16,9 @@
             <form action="/delete/{{ loop.index0 }}" method="POST" style="display:inline;">
                 <button type="submit">Delete</button>
             </form>
+            <form action="/update/{{ loop.index0 }}" method="GET" style="display:inline;">
+                <button type="submit">Update</button>
+            </form>
         </li>
         {% endfor %}
     </ul>

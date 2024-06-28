@@ -42,6 +42,27 @@ def add():
     return render_template('add.html')
 
 
+@app.route('/update/<int:post_id>', methods=['GET', 'POST'])
+def update(post_id):
+    blog_posts = load_blog_posts()
+    if request.method == 'POST':
+        title = request.form['title']
+        author = request.form['author']
+        content = request.form['content']
+
+        blog_posts[post_id] = {
+            "title": title,
+            "author": author,
+            "content": content
+        }
+        save_blog_posts(blog_posts)
+
+        return redirect(url_for('index'))
+
+    post = blog_posts[post_id]
+    return render_template('update.html', post=post, post_id=post_id)
+
+
 @app.route('/delete/<int:post_id>', methods=['POST'])
 def delete(post_id):
     blog_posts = load_blog_posts()
