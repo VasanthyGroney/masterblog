@@ -14,6 +14,13 @@ def save_blog_posts(posts):
         json.dump(posts, file, indent=4)
 
 
+def fetch_post_by_id(post_id):
+    blog_posts = load_blog_posts()
+    if 0 <= post_id < len(blog_posts):
+        return blog_posts[post_id]
+    return None
+
+
 @app.route('/')
 def index():
     blog_posts = load_blog_posts()
@@ -45,6 +52,10 @@ def add():
 @app.route('/update/<int:post_id>', methods=['GET', 'POST'])
 def update(post_id):
     blog_posts = load_blog_posts()
+    post = fetch_post_by_id(post_id)
+    if post is None:
+        return "Post not found", 404
+
     if request.method == 'POST':
         title = request.form['title']
         author = request.form['author']
@@ -59,7 +70,6 @@ def update(post_id):
 
         return redirect(url_for('index'))
 
-    post = blog_posts[post_id]
     return render_template('update.html', post=post, post_id=post_id)
 
 
