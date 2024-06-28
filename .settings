@@ -1,0 +1,991 @@
+[editor]
+tab_size = 2
+; enter your editor preferences here...
+
+[ide]
+; enter your ide preferences here...
+
+[code-beautifier]
+; enter your code-beautifier preferences here...
+
+[codio-filetree]
+; enter your codio-filetree preferences here...
+
+[codio-lsp]
+; enter your codio-lsp preferences here...
+
+[junit]
+; enter your junit preferences here...
+
+[git]
+; enter your git preferences here...
+
+[terminal]
+; enter your terminal preferences here...
+
+[preview]
+; enter your preview preferences here...
+
+[emmet]
+; enter your emmet preferences here...
+
+[search]
+; enter your search preferences here...
+
+[guides]
+; enter your guides preferences here...
+
+[settings]
+; enter your settings preferences here...
+
+[account]
+; enter your account preferences here...
+
+[project]
+; enter your project preferences here...
+
+[install-software]
+; enter your install-software preferences here...
+
+[education]
+; enter your education preferences here...
+
+[deployment]
+; enter your deployment preferences here...
+
+[container]
+; enter your container preferences here...
+
+[sync-structure]
+; enter your sync-structure preferences here...
+
+[Codio Lexikon]
+; enter your Codio Lexikon preferences here...
+
+[editor]
+
+;Show line numbers.
+; Type: boolean
+line_numbers = true
+
+;Visible tabs.
+; Type: boolean
+visible_tabs = false
+
+;Whether to use the context-sensitive indentation that the mode provides (or just indent the same as the line before).
+; Type: boolean
+smart_indent = true
+
+;Font size.
+; Type: int
+font_size = 15
+
+;Scroll or wrap for long lines.
+; Type: boolean
+wrap = false
+
+;Tab size.
+; Type: int
+tab_size = 4
+
+;Navigate within soft tabs.
+; Type: boolean
+navigate_within_soft_tabs =
+
+;Highlight active line.
+; Type: boolean
+highlight_active = true
+
+;Show vertical ruler.
+; Type: int
+ruler = 0
+
+;Editor theme.
+; Type: list
+; Values:
+;  3024-day : 3024-day
+;  3024-night : 3024-night
+;  ambiance : ambiance
+;  base16-dark : base16-dark
+;  base16-light : base16-light
+;  blackboard : blackboard
+;  bold : bold
+;  cobalt : cobalt
+;  default : default
+;  dyslexic : dyslexic
+;  earthsong : earthsong
+;  eclipse : eclipse
+;  elegant : elegant
+;  erlang-dark : erlang-dark
+;  frontier : frontier
+;  juicy : juicy
+;  lesser-dark : lesser-dark
+;  mbo : mbo
+;  mellow : mellow
+;  midnight : midnight
+;  monokai : monokai
+;  neat : neat
+;  night : night
+;  ocean-dark : ocean-dark
+;  ocean-light : ocean-light
+;  paraiso-dark : paraiso-dark
+;  paraiso-light : paraiso-light
+;  pastel : pastel
+;  pastel-on-dark : pastel-on-dark
+;  peacock : peacock
+;  rubyblue : rubyblue
+;  solarized light : solarized light
+;  solarized dark : solarized dark
+;  the-matrix : the-matrix
+;  tomorrow-night-bright : tomorrow-night-bright
+;  tomorrow-night-eighties : tomorrow-night-eighties
+;  twilight : twilight
+;  vibrant-ink : vibrant-ink
+;  xq-dark : xq-dark
+;  xq-light : xq-light
+;  zenburn : zenburn
+theme = default
+
+;Use tabs for indentation.
+; Type: boolean
+indent_with_tabs = false
+
+;Enable linting (TypeScript, JavaScript, JSON & CSS).
+; Type: boolean
+linting = false
+
+;Show matching brackets to be highlighted whenever the cursor is next to them.
+; Type: boolean
+match_brackets = true
+
+;Auto-close brackets and quotes when typed.
+; Type: boolean
+auto_close_brackets = true
+
+;Show whitespace.
+; Type: boolean
+show_trailing_space = false
+
+;Prefix new lines inside C-like block comments with an asterisk when Enter is pressed.
+; Type: boolean
+continue_comments = true
+
+;Default key map to use
+; Type: list
+; Values:
+;  default : default
+;  vim : vim
+;  emacs : emacs
+keymap = default
+
+;Show completions automatic after 2 symbols types or special symbol used.
+; Type: boolean
+automatic_completions = true
+
+;Highlight spell mistakes in markdown files. Only English. Opened files have to be reloaded.
+; Type: boolean
+spellcheck = true
+
+;Show minimap.
+; Type: boolean
+minimap = false
+
+;Show auto-completions.
+; Type: hotkey
+key_autocomplete = Shift+Space
+
+;Toggle comment.
+; Type: hotkey
+key_toggleComment = Cmd+/
+
+;Go to start of line.
+; Type: hotkey
+key_go_line_start = Cmd+Left
+
+;Go to end of line.
+; Type: hotkey
+key_go_line_end = Cmd+Right
+
+;Select all.
+; Type: hotkey
+key_select_all = Cmd+A
+
+;Delete selected or active line.
+; Type: hotkey
+key_remove_selected_line = Ctrl+Shift+K
+
+;Empty line.
+; Type: hotkey
+key_delete_line = Cmd+Delete
+
+;Delete word before caret.
+; Type: hotkey
+key_del_group_before = Ctrl+Backspace
+
+;Delete word after caret.
+; Type: hotkey
+key_del_group_after = Ctrl+Delete
+
+;Delete line before caret.
+; Type: hotkey
+key_del_line_left = Cmd+Backspace
+
+;Delete line after caret.
+; Type: hotkey
+key_kill_line = Ctrl+K
+
+;Go to end of document.
+; Type: hotkey
+key_go_doc_end = Cmd+End
+
+;Find.
+; Type: hotkey
+key_find = Cmd+F
+
+;Go to beginning of document.
+; Type: hotkey
+key_go_doc_start = Cmd+Up
+
+;Go left.
+; Type: hotkey
+key_go_group_left = Alt+Left
+
+;Go right
+; Type: hotkey
+key_go_group_right = Alt+Right
+
+;Redo.
+; Type: hotkey
+key_redo = Cmd+Y
+
+;Undo.
+; Type: hotkey
+key_undo = Cmd+Z
+
+;Indent less.
+; Type: hotkey
+key_indent_less = Cmd+[
+
+;Indent more
+; Type: hotkey
+key_indent_more = Cmd+]
+
+;Replace.
+; Type: hotkey
+key_replace = Cmd+Alt+F
+
+;Replace all.
+; Type: hotkey
+key_replace_all = Shift+Cmd+Alt+F
+
+;Save current file.
+; Type: hotkey
+key_save_single = Cmd+Shift+Alt+S
+
+;Save all open files.
+; Type: hotkey
+key_save = Cmd+Shift+S
+
+;Save all open files.
+; Type: hotkey
+key_save_all = Cmd+S
+
+;Jumps to a specific line.
+; Type: hotkey
+key_jump_to_line = Alt+G
+
+;Remove indentation.
+; Type: hotkey
+key_indentLess = Shift+Tab
+
+;Insert Tab symbol
+; Type: hotkey
+key_insertTab = Cmd+Alt+T
+
+;Show line numbers: Toggle.
+; Type: hotkey
+key_toggle:line_numbers =
+
+;Visible Tabs: Toggle.
+; Type: hotkey
+key_toggle:visible_tabs =
+
+;Word wrap: Toggle.
+; Type: hotkey
+key_toggle:wrap =
+
+;Highlight active line: Toggle.
+; Type: hotkey
+key_toggle:highlight_active =
+
+;Use tabs for indentation: Toggle.
+; Type: hotkey
+key_toggle:indent_with_tabs =
+
+;Code linting: Toggle.
+; Type: hotkey
+key_toggle:linting =
+
+;Code folding: Toggle.
+; Type: hotkey
+key_toggle:folding =
+
+;Show matching brackets: Toggle.
+; Type: hotkey
+key_toggle:match_brackets =
+
+;Auto Close brackets: Toggle.
+; Type: hotkey
+key_toggle:auto_close_brackets =
+
+;Auto close tags on opening: Toggle.
+; Type: hotkey
+key_toggle:auto_close_tags_when_opening =
+
+;Auto close on close: Toggle.
+; Type: hotkey
+key_toggle:auto_close_tags_when_closing =
+
+;Show trailing whitespace: Toggle.
+; Type: hotkey
+key_toggle:show_trailing_space =
+
+;Continue comments: Toggle.
+; Type: hotkey
+key_toggle:continue_comments =
+
+;Automatic Completions: Toggle.
+; Type: hotkey
+key_toggle:automatic_completions =
+
+
+
+[ide]
+
+;Show asterisk on unsaved tabs
+; Type: boolean
+highlight_unsaved_tabs = false
+
+;New file.
+; Type: hotkey
+new_file = Alt+Shift+N
+
+;New folder.
+; Type: hotkey
+new_folder = Alt+Ctrl+Shift+N
+
+;Delete item.
+; Type: hotkey
+delete_item = Del
+
+;Rename item.
+; Type: hotkey
+rename_item = Ctrl+Alt+E
+
+;Upload item.
+; Type: hotkey
+upload_item =
+
+;Reset to the default layout.
+; Type: hotkey
+layout_default = Cmd+Alt+R
+
+;simple layout.
+; Type: hotkey
+layout_simple =
+
+;2 columns layout.
+; Type: hotkey
+layout_2_columns =
+
+;2 rows layout.
+; Type: hotkey
+layout_2_rows =
+
+;Showcase layout.
+; Type: hotkey
+layout_showcase =
+
+;Split the selected panel horizontally.
+; Type: hotkey
+panel_split_horizontal = Cmd+Alt+H
+
+;Split the selected panel vertically.
+; Type: hotkey
+panel_split_vertical = Cmd+Alt+V
+
+;Join with Closest.
+; Type: hotkey
+panel:join =
+
+;Close the selected panel.
+; Type: hotkey
+panel_close = Cmd+Alt+C
+
+;Close the selected tab.
+; Type: hotkey
+tab_close = Alt+W
+
+;Close the tabs in selected panel.
+; Type: hotkey
+tab_close_all = Alt+Shift+W
+
+;Close others tabs in selected panel, except current.
+; Type: hotkey
+tab_close_others = Cmd+Alt+W
+
+;Close tabs in selected panel on the left side of the current.
+; Type: hotkey
+tab_close_left =
+
+;Close tabs in selected panel on the right side of the current.
+; Type: hotkey
+tab_close_right =
+
+;Cycle to the tab which is to the left of the current tab.
+; Type: hotkey
+tab_switch_left = Alt+Shift+,
+
+;Cycle to the tab which is to the right of the current tab.
+; Type: hotkey
+tab_switch_right = Alt+Shift+.
+
+;Go to fullscreen mode
+; Type: hotkey
+fullscreen = Cmd+Shift+F
+
+;Preview
+; Type: hotkey
+preview = Shift+F9
+
+;Deploy
+; Type: hotkey
+deploy = Alt+F9
+
+;Run
+; Type: hotkey
+run = Ctrl+F9
+
+;Open a file.
+; Type: hotkey
+key_quick_open = Cmd+O
+
+;Run an action.
+; Type: hotkey
+key_quick_run = Cmd+Shift+P
+
+;Escape button press
+; Type: hotkey
+key_esc = Esc
+
+;Switch active tab view type.
+; Type: hotkey
+switch_view_type = Cmd+J
+
+;Switch to panel to the left of the current panel
+; Type: hotkey
+panel_switch_left = Ctrl-Shift-Alt-Left
+
+;Switch to panel to the right of the current panel
+; Type: hotkey
+panel_switch_right = Ctrl-Shift-Alt-Right
+
+;Switch to panel above the current panel
+; Type: hotkey
+panel_switch_up = Ctrl-Shift-Alt-Up
+
+;Switch to panel below the current panel
+; Type: hotkey
+panel_switch_down = Ctrl-Shift-Alt-Down
+
+;Move focus to the menu
+; Type: hotkey
+key_menu_focus = F10
+
+
+
+[code-beautifier]
+
+;Indent level
+; Type: int
+indent_level = 0
+
+;Indent with tabs. Overrides indent char and indent size.
+; Type: boolean
+indent_with_tabs = false
+
+;Navigate within soft tabs.
+; Type: boolean
+navigate_within_soft_tabs =
+
+;Preserve line-breaks.
+; Type: boolean
+preserve_newlines = false
+
+;Number of line-breaks to be preserved in one chunk.
+; Type: int
+max_preserve_newlines = 5
+
+;Enable jslint-strict mode.
+; Type: boolean
+jslint_happy = false
+
+;Brace style.
+; Type: list
+; Values:
+;  collapse : collapse
+;  expand : expand
+;  end-expand : end-expand
+brace_style = collapse
+
+;Preserve array indentation.
+; Type: boolean
+keep_array_indentation = false
+
+;Preserve function indentation.
+; Type: boolean
+keep_function_indentation = false
+
+;Space before conditional.
+; Type: boolean
+space_before_conditional = false
+
+;Break chained method calls across subsequent lines.
+; Type: boolean
+break_chained_methods = false
+
+;Indent eval code.
+; Type: boolean
+eval_code = false
+
+;Decode printable characters encoded in XNN notation.
+; Type: boolean
+unescape_strings = false
+
+;Wrap lines at next opportunity after N characters.
+; Type: int
+wrap_line_length = 0
+
+;Indent scripts.
+; Type: list
+; Values:
+;  keep : keep
+;  separate : separate
+;  normal : normal
+indent-scripts = normal
+
+;Format the code.
+; Type: hotkey
+key_format_code = Cmd+Shift+B
+
+;Strict linting: Toggle.
+; Type: hotkey
+key_toggle:jslint_happy =
+
+;Preserve array indentation: Toggle.
+; Type: hotkey
+key_toggle:keep_array_indentation =
+
+;Preserve function indentation: Toggle.
+; Type: hotkey
+key_toggle:keep_function_indentation =
+
+;Space before conditional: Toggle.
+; Type: hotkey
+key_toggle:space_before_conditional =
+
+;Break chained methods calls across lines: Toggle.
+; Type: hotkey
+key_toggle:break_chained_methods =
+
+;Indent eval code: Toggle.
+; Type: hotkey
+key_toggle:eval_code =
+
+;Decode printable characters in XNN notation: Toggle.
+; Type: hotkey
+key_toggle:unescape_strings =
+
+
+
+[codio-filetree]
+
+;Maximum items in tree level
+; Type: int
+tree_items_limit = 150
+
+;Ability to show(hide) dotfiles, exclude codio specific
+; Type: boolean
+show_dot_files = true
+
+
+
+[codio-lsp]
+
+;Enable language server support.
+; Type: boolean
+enable_lsp_support = false
+
+;Toggle language Server settings
+; Type: hotkey
+toggle = Shift+Alt+L
+
+
+
+[junit]
+
+;set time out for junit scripts.
+; Type: int
+timeout = 30
+
+;Open and execute JUnit
+; Type: hotkey
+open = Shift+Alt+J
+
+
+
+[git]
+
+;Git: pull from origin
+; Type: hotkey
+pull =
+
+;Git: push to origin
+; Type: hotkey
+push =
+
+;Git: create a new branch
+; Type: hotkey
+show-create-branch =
+
+;Git: switch between branches
+; Type: hotkey
+show-switch-branch =
+
+;Git: delete a branch
+; Type: hotkey
+show-delete-branch =
+
+;Git: show remotes
+; Type: hotkey
+remotes-show =
+
+
+
+[terminal]
+
+;Font size.
+; Type: int
+font_size = 14
+
+;Terminal theme.
+; Type: string
+theme = dark
+
+;Number of lines available in the scroll history.
+; Type: int
+scrollback = 3000
+
+;Quick Connect
+; Type: hotkey
+show-connect-dialog =
+
+;Connections Manager
+; Type: hotkey
+show-connections-manager =
+
+;Terminal. SSH connection to the box
+; Type: hotkey
+backend-connection = Shift+Alt+T
+
+
+
+[preview]
+
+;This value will be used when user previews the project.
+; Type: string
+index_file =
+
+
+
+[emmet]
+
+;Expand abbreviation
+; Type: hotkey
+expand_abbreviation = Cmd-E
+
+;Expand abbreviation with tab
+; Type: hotkey
+expand_abbreviation_with_tab = Tab
+
+;Match pair outward
+; Type: hotkey
+match_pair_outward = Cmd-D
+
+;Match pair inward
+; Type: hotkey
+match_pair_inward = Shift-Cmd-D
+
+;Wrap with abbreviation
+; Type: hotkey
+wrap_with_abbreviation = Shift-Cmd-A
+
+;Next edit point
+; Type: hotkey
+next_edit_point = Ctrl-Alt-Right
+
+;Prev edit point
+; Type: hotkey
+prev_edit_point = Ctrl-Alt-Left
+
+;Merge lines
+; Type: hotkey
+merge_lines = Shift-Cmd-M
+
+;Split/join tag
+; Type: hotkey
+split_join_tag = Shift-Cmd-J
+
+;Remove tag
+; Type: hotkey
+remove_tag = Cmd-K
+
+;Evaluate math expression
+; Type: hotkey
+evaluate_math_expression = Shift-Cmd-Y
+
+;Increment number by 1
+; Type: hotkey
+increment_number_by_1 = Ctrl-Up
+
+;Decrement number by 1
+; Type: hotkey
+decrement_number_by_1 = Ctrl-Down
+
+;Increment number by 01
+; Type: hotkey
+increment_number_by_01 = Alt-Up
+
+;Decrement number by 01
+; Type: hotkey
+decrement_number_by_01 = Alt-Down
+
+;Increment number by 10
+; Type: hotkey
+increment_number_by_10 = Ctrl-Alt-Up
+
+;Decrement number by 10
+; Type: hotkey
+decrement_number_by_10 = Ctrl-Alt-Down
+
+;Select next item
+; Type: hotkey
+select_next_item = Shift-Cmd-.
+
+;Select previous item
+; Type: hotkey
+select_previous_item = Shift-Cmd-,
+
+;Reflect css value
+; Type: hotkey
+reflect_css_value = Cmd-B
+
+
+
+[search]
+
+;Find in project
+; Type: hotkey
+key_searchProject = Ctrl+H
+
+;Replace in project
+; Type: hotkey
+key_replaceProject = Ctrl+Shift+H
+
+
+
+[guides]
+
+;Guides font size.
+; Type: int
+font_size = 18
+
+;Sync guides font size with editor and terminal font sizes.
+; Type: boolean
+sync_font_size = false
+
+;Guides theme.
+; Type: list
+; Values:
+;  light : light
+;  charcoal : charcoal
+;  paper : paper
+;  dyslexic : dyslexic
+theme = light
+
+;Editor theme before dyslexic theme in guides was applied.
+; Type: string
+editor_theme_before_dyslexic =
+
+;Edit Guide
+; Type: hotkey
+pre_edit = Cmd+Alt+G
+
+;Play Guide
+; Type: hotkey
+view =
+
+;Remove custom CSSs from Guides
+; Type: hotkey
+remove_custom_css =
+
+;Add custom CSS to Guides
+; Type: hotkey
+add_custom_css =
+
+;Make selected text bold in guides markdown editor
+; Type: hotkey
+md_toolbar_bold = Cmd+B
+
+;Convert selected text into innumerate list
+; Type: hotkey
+md_toolbar_u_list = Cmd+U
+
+;Convert selected text into ordered list
+; Type: hotkey
+md_toolbar_o_list = Cmd+,
+
+;Create code block with selected text
+; Type: hotkey
+md_toolbar_code = Cmd+D
+
+;Create command button
+; Type: hotkey
+md_toolbar_run = Cmd+M
+
+
+
+[settings]
+
+;Open project preferences.
+; Type: hotkey
+project:open =
+
+;Open user preferences.
+; Type: hotkey
+user:open =
+
+
+
+[account]
+
+;Sign out.
+; Type: hotkey
+logout =
+
+
+
+[project]
+
+;Create project.
+; Type: hotkey
+create =
+
+;Open project settings.
+; Type: hotkey
+preferences =
+
+;Open project permissions.
+; Type: hotkey
+permissions =
+
+;Copy project.
+; Type: hotkey
+fork =
+
+;Share project.
+; Type: hotkey
+share =
+
+;Export project as zip.
+; Type: hotkey
+export:zip =
+
+;Delete project.
+; Type: hotkey
+delete =
+
+;Close project.
+; Type: hotkey
+close =
+
+;Project stack settings.
+; Type: hotkey
+stack =
+
+
+
+[education]
+
+;Mark project as completed.
+; Type: hotkey
+mark_as_completed =
+
+;Mark project as uncompleted.
+; Type: hotkey
+mark_as_uncompleted =
+
+
+
+[install-software]
+
+;Install Software
+; Type: hotkey
+install-software =
+
+
+
+[deployment]
+
+;Deploy current file to default deployment target
+; Type: hotkey
+key_deploy_current_file = Cmd+Alt+D
+
+;Open Deploy tab
+; Type: hotkey
+deploy =
+
+;Manage deployment targets
+; Type: hotkey
+manage_targets =
+
+
+
+[container]
+
+;Restart the box
+; Type: hotkey
+restart =
+
+;Reset user home on the box to original state
+; Type: hotkey
+reset =
+
+
+
+[sync-structure]
+
+;Synchronize the file structure
+; Type: hotkey
+sync =
+
+
+
+[Codio Lexikon]
+
+;Open Lexikon
+; Type: hotkey
+key_lexikon = Cmd+Alt+L
+
+
+
