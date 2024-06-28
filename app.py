@@ -42,5 +42,15 @@ def add():
     return render_template('add.html')
 
 
+@app.route('/delete/<int:post_id>', methods=['POST'])
+def delete(post_id):
+    blog_posts = load_blog_posts()
+    if 0 <= post_id < len(blog_posts):
+        del blog_posts[post_id]
+        save_blog_posts(blog_posts)
+
+    return redirect(url_for('index'))
+
+
 if __name__ == '__main__':
     app.run(debug=True)
