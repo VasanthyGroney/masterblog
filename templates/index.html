@@ -2,22 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>Blog Posts</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <h1>Blog Posts</h1>
-    <ul>
+    <div class="posts">
         {% for post in posts %}
-        <li>
-            <h2>{{ post.title }}</h2>
-            <p>{{ post.content }}</p>
-            <p><em>by {{ post.author }}</em></p>
-            <a href="{{ url_for('delete', post_id=post.id) }}">Delete</a>
-            <a href="{{ url_for('update', post_id=post.id) }}">Update</a>
-        </li>
+        <div class="post">
+            <h2>{{ post['title'] }}</h2>
+            <p><strong>Author:</strong> {{ post['author'] }}</p>
+            <p>{{ post['content'] }}</p>
+            <form action="{{ url_for('delete', post_id=post['id']) }}" method="post" style="display:inline;">
+                <input type="submit" value="Delete">
+            </form>
+            <a href="{{ url_for('update', post_id=post['id']) }}">Update</a>
+        </div>
         {% endfor %}
-    </ul>
+    </div>
     <a href="{{ url_for('add') }}">Add New Post</a>
 </body>
 </html>
