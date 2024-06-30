@@ -39,7 +39,8 @@ def add():
             'id': new_id,
             'author': request.form['author'],
             'title': request.form['title'],
-            'content': request.form['content']
+            'content': request.form['content'],
+            'likes': 0
         }
         posts.append(new_post)
         save_posts(posts)
@@ -59,15 +60,35 @@ def update(post_id):
     post = fetch_post_by_id(post_id)
     if post is None:
         return "Post not found", 404
+    if request.method == 'GET':
+        message = 'Please enter and submit'
+        return render_template('update.html', post=post, message=message)
 
     if request.method == 'POST':
-        post['author'] = request.form['author']
-        post['title'] = request.form['title']
-        post['content'] = request.form['content']
-        save_posts(posts)
-        return redirect(url_for('index'))
+        author = request.form.get('author')
+        title = request.form.get('title')
+        content = request.form.get('content')
+        for post in posts:
+            if post['id'] == post_id:
+                post['author'] = author
+                post['title'] = title
+                post['content'] = content
+                save_posts(posts)
+                message = 'update successfull'
+                return render_template('update.html', post=post, message=message)
+        message = "Something went wrong. Try again!"
+        return render_template('update.html', post=post, message=message)
 
-    return render_template('update.html', post=post)
+
+
+@app.route('/like/<int:post_id>', methods=['POST'])
+def like(post_id):
+    posts = load_posts()
+    for post in posts:
+        if post_id == post["id"]:
+            post['likes'] += 1
+            save_posts(posts)
+            return redirect(url_for('index'))
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)  # Change the port to avoid conflicts
+    app.run(debug=True, port=5000)

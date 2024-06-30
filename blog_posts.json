@@ -1,20 +1,30 @@
 [
     {
-        "id": 1,
-        "author": "John Doe",
-        "title": "First Post",
-        "content": "This is my first post."
-    },
-    {
         "id": 2,
         "author": "Jane Doe",
         "title": "Second Post",
-        "content": "This is another post."
+        "content": "This is another post.",
+        "likes": 2
     },
     {
         "id": 3,
         "author": "Heal Your Self",
         "title": "louis hay",
-        "content": "meditation"
+        "content": "meditation life",
+        "likes": 0
+    },
+    {
+        "id": 4,
+        "author": "walter",
+        "title": "the new begining",
+        "content": "life after flad",
+        "likes": 0
+    },
+    {
+        "id": 6,
+        "author": "masashi kishimoto",
+        "title": "naruto",
+        "content": "an japanese manga about ninja and a young boy called naruto",
+        "likes": 0
     }
 ]

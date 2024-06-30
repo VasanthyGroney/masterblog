@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Add New Blog Post</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <h1>Add New Blog Post</h1>
-    <form action="/add" method="post">
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title" required><br><br>
-
-        <label for="author">Author:</label>
+    <form method="POST" action="{{ url_for('add') }}">
+        <label for="author">Author:</label><br>
         <input type="text" id="author" name="author" required><br><br>
 
-        <label for="content">Content:</label><br>
-        <textarea id="content" name="content" rows="10" cols="30" required></textarea><br><br>
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" required><br><br>
 
-        <input type="submit" value="Add Post">
+        <label for="content">Content:</label><br>
+        <textarea id="content" name="content" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="submit" value="Submit">
     </form>
 </body>
 </html>
